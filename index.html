@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kunzang Choki | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Gradient header behind the profile card -->
+  <header class="hero">
+    <nav class="nav container">
+      <a href="#" class="brand">Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Profile card -->
+    <section class="profile-card container" aria-label="Profile">
+      <div class="pc-avatar-wrap">
+        <img class="pc-avatar" src="photo_6224316530519295850_y.jpg" alt="Kunzang Choki" />
+      </div>
+
+      <h1 class="pc-name">Kunzang Choki</h1>
+      <p class="pc-location">Bhutan</p>
+      <p class="pc-roles">B.Ed IT Student • Web Enthusiast</p>
+
+      <a class="btn-primary" href="#about">Show more</a>
+    </section>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <p>
+        I am an aspiring IT educator passionate about technology and learning.  
+        I enjoy exploring how digital tools can improve both teaching and real-world problem solving.  
+        My goal is to inspire creativity and innovation through ICT in education.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section container">
+      <h2>Education</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>B.Ed in Information Technology</h3>
+          <p>Royal University of Bhutan • Ongoing</p>
+          <p>Focused on ICT integration, web technologies, and digital teaching methods.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <p>
+        Skilled in front-end web technologies such as HTML, CSS, and basic JavaScript.  
+        Familiar with Git & GitHub, responsive design, and collaborative online tools.  
+        Strong teamwork, adaptability, and communication skills.
+      </p>
+      <div class="skills">
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 / Flexbox / Grid</li>
+          <li>JavaScript basics</li>
+          <li>Git & GitHub</li>
+          <li>Responsive Design</li>
+          <li>Teamwork & Communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Smart Attendance System</h3>
+          <p>A web-based tool to record and manage student attendance digitally.</p>
+        </article>
+        <article class="card">
+          <h3>E-Learning Platform</h3>
+          <p>A prototype platform to support online classes and digital resources for students.</p>
+        </article>
+        <article class="card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio to showcase projects and skills.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <form class="contact-form" action="mailto:08230152.sce@rub.edu.bt" method="post" enctype="text/plain">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button class="btn-primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Kunzang Choki</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle + current year
+    const btn = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    btn.addEventListener('click', () => links.classList.toggle('open'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
